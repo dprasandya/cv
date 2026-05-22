@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ap_card_report_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1149b19d-8383-4c38-a689-06bcab8c1343">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="TableData" uuid="9590d883-9b4c-48b1-b4f2-f904f564edd5">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="doc_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="doc_date" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="nominal" class="java.math.BigDecimal">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select a.doc_id, a.nominal, a.remarks , b.doc_date from ap_invoice_payment_detail a
+inner join ap_invoice_payment b on a.co_id=b.co_id and a.doc_id=b.doc_id and b.status<>0 and b.doc_date<=$P{doc_date}
+left join cancel_transactions c on b.co_id=c.co_id and b.doc_id=c.for_doc_id and c.status=1 and c.doc_date<=$P{doc_date}
+where a.co_id=$P{co_id} and a.for_doc_av=$P{doc_id}
+union all
+select a.doc_id, a.nominal, a.remarks, a.doc_date
+from refund a
+where a.co_id=$P{co_id} and a.for_doc_id=$P{doc_id} and a.doc_type='AP' and doc_date<=$P{doc_date}]]>
+		</queryString>
+		<field name="DOC_ID" class="java.lang.String"/>
+		<field name="NOMINAL" class="java.math.BigDecimal"/>
+		<field name="REMARKS" class="java.lang.String"/>
+		<field name="DOC_DATE" class="java.sql.Date"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+		<variable name="nominal" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{NOMINAL}]]></variableExpression>
+		</variable>
+		<variable name="outstanding" class="java.math.BigDecimal">
+			<variableExpression><![CDATA[$P{nominal}.doubleValue() - $V{nominal}.doubleValue()]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="co_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="doc_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="doc_date" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nominal" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select a.doc_id, a.nominal, a.remarks , b.doc_date from ap_invoice_payment_detail a
+inner join ap_invoice_payment b on a.co_id=b.co_id and a.doc_id=b.doc_id and b.status<>0 and b.doc_date<=$P{doc_date}
+left join cancel_transactions c on b.co_id=c.co_id and b.doc_id=c.for_doc_id and c.status=1 and c.doc_date<=$P{doc_date}
+where a.co_id=$P{co_id} and a.for_doc_av=$P{doc_id}]]>
+	</queryString>
+	<field name="DOC_ID" class="java.lang.String"/>
+	<field name="NOMINAL" class="java.math.BigDecimal"/>
+	<field name="REMARKS" class="java.lang.String"/>
+	<field name="DOC_DATE" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="4223b844-6185-4b46-a141-6dd1cf3a1339" key="table" x="0" y="0" width="538" height="43"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TableData" uuid="92baa9e7-64ee-420b-8c9e-6af434f560f5">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="doc_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="doc_date">
+							<datasetParameterExpression><![CDATA[$P{doc_date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="nominal">
+							<datasetParameterExpression><![CDATA[$P{nominal}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="81" uuid="269f7802-ed64-457b-b552-8c5208fc35bc">
+						<jr:tableFooter height="17" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="976ab730-050e-44af-ae89-270dfe6a5622" x="0" y="0" width="81" height="20"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_ID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47" uuid="7f5ddc6d-304c-4f73-aa32-9e237a3c8e5a">
+						<jr:tableFooter height="17" rowSpan="1">
+							<staticText>
+								<reportElement uuid="88983c27-e82e-4e87-b714-c3e99377e427" x="0" y="0" width="47" height="17"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="50838653-367d-4d04-9566-9cd35e2bc810" x="0" y="0" width="47" height="20"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d20690c0-0170-4098-bc8a-5eb232d3e617">
+						<jr:tableFooter height="17" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="3fb4f91f-53c3-4bec-a40f-ac99712d08d8" x="0" y="0" width="90" height="17"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{nominal}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="1cde4a5b-d94b-4452-8ec6-2e05dbb48d88" x="0" y="0" width="90" height="20"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{NOMINAL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="132" uuid="dfe22bc5-c842-4226-9284-14a30af95e09">
+						<jr:tableFooter height="17" rowSpan="1">
+							<staticText>
+								<reportElement uuid="eb077c86-d689-40cc-8203-7fb4b487bc66" x="0" y="0" width="55" height="17"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<text><![CDATA[OUTSTANDING]]></text>
+							</staticText>
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="851ad33f-9a66-4bfc-8095-72388a42fcfd" x="55" y="0" width="77" height="17"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{outstanding}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="cff12183-8990-42f9-afd1-39db49d41376" x="0" y="0" width="132" height="20"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{REMARKS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</title>
+</jasperReport>

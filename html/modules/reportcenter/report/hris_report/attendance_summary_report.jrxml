@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrder" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="2dd3edc5-a07d-4774-9e4f-8e3a837ac104">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FF0000"/>
+		</box>
+	</style>
+	<style name="TableHeader" mode="Opaque" backcolor="#808080"/>
+	<style name="TableFooter" mode="Opaque" backcolor="#C0C0C0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("O")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FF9999"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("H")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#66FF66"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("R")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCCCC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("S")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FFFF33"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("I")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#6699FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("D")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#00FFCC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("A")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FF9933"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("R")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CC9900"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("C")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#990099"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("P")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#009966"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("F")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#00CC00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("B")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#66FFCC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("T")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CC66FF"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("K")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#CCCC00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("L")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FF9999"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("V")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#0FC689"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("W")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FF33CC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("M")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#0066CC"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("J")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FFFF66"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="attendance" uuid="a10c719c-b9f0-4b23-9faf-c92e808ce880">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="fromdate" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="todate" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="company_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="js_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="ol_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="group_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="usrname" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="line" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_attendance_summary_report($P{usrname},$P{line},$P{group_id},$P{ol_id},$P{js_id},$P{emp_id},$P{company_id},$P{todate},$P{fromdate},$P{co_id})]]>
+		</queryString>
+		<field name="JS_NAME" class="java.lang.String"/>
+		<field name="LINE" class="java.lang.String"/>
+		<field name="GROUP_ID" class="java.lang.String"/>
+		<field name="POS_NAME" class="java.lang.String"/>
+		<field name="POS_ID" class="java.lang.String"/>
+		<field name="TIME_OUT" class="java.sql.Time"/>
+		<field name="TIME_IN" class="java.sql.Time"/>
+		<field name="LATE_TIME" class="java.math.BigDecimal"/>
+		<field name="DAY_NAME" class="java.lang.String"/>
+		<field name="ATTENDANCE_DATE" class="java.sql.Date"/>
+		<field name="STATUS" class="java.lang.String"/>
+		<field name="JOB_DESC" class="java.lang.String"/>
+		<field name="JOB_ID" class="java.lang.String"/>
+		<field name="COMPANY_NAME" class="java.lang.String"/>
+		<field name="COMPANY_ID" class="java.lang.String"/>
+		<field name="EMP_NAME" class="java.lang.String"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+		<variable name="Alpha" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("A") ? 1 : 0]]></variableExpression>
+		</variable>
+		<variable name="hadir" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("H") ? 1 :0]]></variableExpression>
+		</variable>
+		<variable name="ijin" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("I") ? 1 :0]]></variableExpression>
+		</variable>
+		<variable name="sakit" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("S") ? 1 :0]]></variableExpression>
+		</variable>
+		<variable name="cuti" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("C") ? 1 :0]]></variableExpression>
+		</variable>
+		<variable name="dinas_luar" class="java.lang.Integer" calculation="Sum">
+			<variableExpression><![CDATA[$F{STATUS}.equals("D") ? 1 : 0]]></variableExpression>
+		</variable>
+		<variable name="telat" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{LATE_TIME}]]></variableExpression>
+		</variable>
+	</subDataset>
+	<parameter name="LOGOURL" class="java.lang.String"/>
+	<parameter name="co_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fromdate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="todate" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="company_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="emp_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="js_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ol_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="group_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usrname" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="line" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select co_name from company where co_id=$P{co_id}]]>
+	</queryString>
+	<field name="CO_NAME" class="java.lang.String"/>
+	<title>
+		<band height="178">
+			<crosstab>
+				<reportElement uuid="3e4d5a15-37eb-4909-b752-1420a2f1d0ba" x="14" y="107" width="816" height="55"/>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="attendance" uuid="cb1ac1b6-c749-431c-a78d-af02bd5c75ac">
+							<datasetParameter name="co_id">
+								<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="fromdate">
+								<datasetParameterExpression><![CDATA[$P{fromdate}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="todate">
+								<datasetParameterExpression><![CDATA[$P{todate}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="company_id">
+								<datasetParameterExpression><![CDATA[$P{company_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="emp_id">
+								<datasetParameterExpression><![CDATA[$P{emp_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="js_id">
+								<datasetParameterExpression><![CDATA[$P{js_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="ol_id">
+								<datasetParameterExpression><![CDATA[$P{ol_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="group_id">
+								<datasetParameterExpression><![CDATA[$P{group_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="usrname">
+								<datasetParameterExpression><![CDATA[$P{usrname}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="line">
+								<datasetParameterExpression><![CDATA[$P{line}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<crosstabHeaderCell>
+					<cellContents>
+						<staticText>
+							<reportElement uuid="4f657c09-bbec-4b25-984d-442cbb831d28" style="Crosstab Data Text" x="0" y="0" width="214" height="26"/>
+							<box>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="5" isBold="true" isItalic="true"/>
+								<paragraph leftIndent="5" rightIndent="5"/>
+							</textElement>
+							<text><![CDATA[REKAP ABSENSI]]></text>
+						</staticText>
+						<staticText>
+							<reportElement uuid="2c0d6536-4d36-4c41-9c89-e9ee4cc0020a" style="Crosstab Data Text" x="122" y="26" width="92" height="13"/>
+							<box>
+								<topPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="4" isBold="true" isItalic="true"/>
+								<paragraph leftIndent="5" rightIndent="5"/>
+							</textElement>
+							<text><![CDATA[NAME]]></text>
+						</staticText>
+						<staticText>
+							<reportElement uuid="63e9e4d3-d1c6-4548-83e9-a0cb6cace1cb" style="Crosstab Data Text" x="92" y="26" width="30" height="13"/>
+							<box>
+								<topPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="5" isBold="true" isItalic="true"/>
+								<paragraph leftIndent="5" rightIndent="5"/>
+							</textElement>
+							<text><![CDATA[ID]]></text>
+						</staticText>
+						<staticText>
+							<reportElement uuid="0e6d8886-9bd6-4033-b380-396f137bab36" style="Crosstab Data Text" x="63" y="26" width="29" height="13"/>
+							<box>
+								<topPen lineWidth="0.5"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.5"/>
+								<rightPen lineWidth="0.5"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font size="5" isBold="true" isItalic="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<text><![CDATA[GROUP]]></text>
+						</staticText>
+						<staticText>
+							<reportElement uuid="7433cab0-036f-4113-9ad5-059a323c6016" style="Crosstab Data Text" x="23" y="26" width="40" height="13"/>
+							<box>
+								<topPen lineWidth="0.5"/>
+								<bottomPen lineWidth="0.5"/>
+							</box>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font size="5" isBold="true" isItalic="true"/>
+								<paragraph leftIndent="5" rightIndent="5"/>
+							</textElement>
+							<text><![CDATA[POSITION]]></text>
+						</staticText>
+					</cellContents>
+				</crosstabHeaderCell>
+				<rowGroup name="LINE" width="23">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{LINE}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents>
+							<textField>
+								<reportElement uuid="81fc7b3b-74aa-43d2-bb10-8408629d0cd4" style="Crosstab Data Text" x="0" y="0" width="23" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{LINE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="POSITION" width="40">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{POS_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="31fc17fc-b5dc-40dc-bc9f-379e1b809fc5" x="0" y="0" width="40" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="4"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{POSITION}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="GROUP_ID" width="29">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{GROUP_ID}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="a7468941-7273-4c11-ad8d-edb3898d269a" x="0" y="0" width="29" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{GROUP_ID}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="EMP_ID" width="30" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{EMP_ID}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Transparent">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.0"/>
+								<rightPen lineWidth="0.0"/>
+							</box>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="47d48329-008b-4d21-9903-7350677de29c" mode="Transparent" x="0" y="0" width="30" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<leftPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="SansSerif" size="4"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{EMP_ID}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="EMP_NAME" width="60">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{EMP_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="af48df50-d013-434e-9ae3-0d6527880038" x="0" y="0" width="60" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="4"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{EMP_NAME}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="STATUS_HARIAN" width="32">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{JS_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="150fb2eb-fd39-49a9-9d3c-1ef50e23f62b" x="0" y="0" width="32" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{STATUS_HARIAN}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="ATTENDANCE_DATE" height="26" totalPosition="End">
+					<bucket class="java.sql.Date">
+						<bucketExpression><![CDATA[$F{ATTENDANCE_DATE}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="dd-MMM" isBlankWhenNull="true">
+								<reportElement uuid="0b4877e8-3c72-4186-b37c-b46f04a92761" x="0" y="13" width="19" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="5"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{ATTENDANCE_DATE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement uuid="4bddb21b-0b32-40e8-b9a3-cbadd0b1b236" x="0" y="13" width="383" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[ATTENDANCE]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="e07bd2e6-b582-40de-8cd7-5acbf2d0b596" x="0" y="0" width="383" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="82c318df-07ba-49ca-b7f6-e3e065a1e891" x="0" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[HADIR]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="278a015d-3150-4fdb-a622-bc06cdc8cac2" x="200" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[ABSEN 1/2 H]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="77c16480-89d9-4497-b8e6-cb66cb9e9d1e" x="120" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[DINAS L]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="b0d229e0-0bd8-43ff-8fad-02a349d92b1e" x="220" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[LEMBUR H (LIBUR)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="e495324d-4786-449d-b3b9-501514dfd60d" x="80" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[IJIN]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="9778342c-9031-4551-8e45-e4a25ad76455" x="40" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[SAKIT
+(S. DR)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="6cfd7470-f72e-47f1-8fb8-9fff2248325f" x="60" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[SAKIT
+(TNP S. DR)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="78c1287a-404c-4535-8c1b-f81655ee04eb" x="20" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[ALPHA]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="bd6ddf8c-95eb-4288-9550-4992fcbbe180" x="100" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[CUTI]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="8a1973bf-a0c8-4156-957b-9755e9bbcc14" x="140" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[LIBUR]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="38707a58-6051-4620-9346-916d0624a23d" x="160" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[DILIBURKAN]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="5f5b968a-0817-41cd-ab32-ae583f0953b2" x="180" y="26" width="20" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[LIBUR 1/2 H]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="fd601624-943b-497c-a463-cc8f308643a4" x="240" y="26" width="38" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[LEMBUR PENGGANTI]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="73af9455-cd4c-4e7c-b375-eb1ec406c83d" x="278" y="26" width="33" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[LEMBUR I FITRI]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="88d210ad-3223-425f-85d7-a11fb8c3b4e0" x="335" y="26" width="24" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[SAKIT
+(K. KRJ)]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="1b8d1293-70d2-40c0-b660-052ffcecbf5e" x="359" y="26" width="24" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[ISOMAN]]></text>
+							</staticText>
+							<staticText>
+								<reportElement uuid="92ef525a-bd46-48e2-be33-3b21724e5a92" x="311" y="26" width="24" height="13"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+									<bottomPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="4" isBold="true" isItalic="true"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<text><![CDATA[WFH]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="DAY_NAME" height="13">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{DAY_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement uuid="432a4956-7ff1-48ab-a356-0041f706f31c" x="0" y="0" width="19" height="13"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="SansSerif" size="5"/>
+									<paragraph leftIndent="1" rightIndent="1"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{DAY_NAME}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="STATUSMeasure" class="java.lang.String" calculation="Count">
+					<measureExpression><![CDATA[$F{STATUS}]]></measureExpression>
+				</measure>
+				<measure name="STATUS_C" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("C") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_H" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("H") ? 1 : null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_I" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("I") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_S" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("S") ? 1 : null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_A" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("A") ? 1 : null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_D" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equals("D") ? 1 : null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_O" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("O") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_K" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("K")  ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_L" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("L") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_T" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("T") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_B2" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("B") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_R" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("R") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_F" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("F") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_P2" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("P") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="time_in" class="java.sql.Time" calculation="Count">
+					<measureExpression><![CDATA[$F{TIME_IN}]]></measureExpression>
+				</measure>
+				<measure name="time_out" class="java.sql.Time" calculation="Count">
+					<measureExpression><![CDATA[$F{TIME_OUT}]]></measureExpression>
+				</measure>
+				<measure name="late" class="java.math.BigDecimal">
+					<measureExpression><![CDATA[$F{LATE_TIME}]]></measureExpression>
+				</measure>
+				<measure name="STATUS_W" class="java.math.BigDecimal" calculation="Sum">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("W") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_M" class="java.math.BigDecimal" calculation="Count">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("M") ? 1: null]]></measureExpression>
+				</measure>
+				<measure name="STATUS_J" class="java.math.BigDecimal" calculation="Count">
+					<measureExpression><![CDATA[$F{STATUS}.equalsIgnoreCase("J") ? 1: null]]></measureExpression>
+				</measure>
+				<crosstabCell width="19" height="13">
+					<cellContents mode="Opaque" style="Crosstab Data Text">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField isStretchWithOverflow="true" pattern="HH.mm" isBlankWhenNull="true">
+							<reportElement uuid="f81f453a-5b3f-49ae-ad56-5f862d786224" style="Crosstab Data Text" x="0" y="0" width="19" height="6"/>
+							<textElement>
+								<font size="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("H") ? $V{time_in} : ($V{STATUSMeasure}.equalsIgnoreCase("B") ? $V{time_in} : ($V{STATUSMeasure}.equalsIgnoreCase("T") ? $V{time_in} : ($V{STATUSMeasure}.equalsIgnoreCase("P") ? $V{time_in} : ($V{STATUSMeasure}.equalsIgnoreCase("F") ? $V{time_in} : ($V{STATUSMeasure}.equalsIgnoreCase("I") ? ($V{time_in}!=null ? $V{time_in} : $V{STATUSMeasure}) : ($V{STATUSMeasure}.equalsIgnoreCase("V") ? $V{time_in} : $V{STATUSMeasure}))))))]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="HH.mm" isBlankWhenNull="true">
+							<reportElement uuid="b610900f-7647-41cb-84eb-220d8007d0be" style="Crosstab Data Text" x="0" y="6" width="19" height="6"/>
+							<textElement>
+								<font size="5"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUSMeasure}.equalsIgnoreCase("H") ? $V{time_out} : ($V{STATUSMeasure}.equalsIgnoreCase("B") ? $V{time_out} : ($V{STATUSMeasure}.equalsIgnoreCase("T") ? $V{time_out} : ($V{STATUSMeasure}.equalsIgnoreCase("P") ? $V{time_out} : ($V{STATUSMeasure}.equalsIgnoreCase("F") ? $V{time_out} : ($V{STATUSMeasure}.equalsIgnoreCase("I") ? ($V{time_out}!=null ? $V{time_out} : $V{STATUSMeasure}) : ($V{STATUSMeasure}.equalsIgnoreCase("V") ? $V{time_out} : $V{STATUSMeasure}))))))]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="19" height="0" rowTotalGroup="EMP_ID">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="383" height="13" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="09d873f2-9ceb-4ffb-b5c3-7dd3b52f3b2b" x="0" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_H}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_H}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="09d873f2-9ceb-4ffb-b5c3-7dd3b52f3b2b" x="20" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_A}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_A}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="7a4b1169-9dd3-4708-96b9-3eec1a91c7a6" x="40" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_S}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_S}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="fb980117-8a78-4204-84e9-8bb321a82cbe" x="60" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_K}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_K}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="8e6b2cb6-37cb-4271-9554-d38b62d9194d" x="80" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_I}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_I}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="e17962eb-dc92-40ea-aef7-af032c88255a" x="100" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_C}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_C}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="648e22ca-a4df-4c52-b0e5-bb8a496c8781" x="120" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_D}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_D}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="471b352e-b062-4fe4-ad11-532519c5f4b7" x="140" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_O}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_O}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="a94589b9-7298-45ea-bd42-a286fcbee268" x="160" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_R}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_R}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="2a12a11a-87cb-47d1-8435-989d3849891f" x="180" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_L}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_L}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="ecf7b763-a03f-488a-9799-cc8902a1c665" x="200" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_T}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_T}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="d076306b-d5a2-46f4-88db-3ea91170a03a" x="220" y="0" width="20" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_B2}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_B2}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+							<reportElement uuid="f8289bca-ed18-42d7-beaf-fe1ef8d3309e" x="240" y="0" width="38" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_P2}.doubleValue() > 0]]></printWhenExpression>
+							</reportElement>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font fontName="SansSerif" size="4" isBold="true"/>
+								<paragraph leftIndent="1" rightIndent="1"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_P2}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement uuid="103959cb-8167-4909-8c2d-f7bf3802f0d6" style="Crosstab Data Text" x="278" y="0" width="33" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_F}.doubleValue() > 1]]></printWhenExpression>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font size="4" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_F}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement uuid="3c169d61-2ee6-4a65-8374-24ea07e66c5f" style="Crosstab Data Text" x="359" y="0" width="24" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_M}.doubleValue() > 1]]></printWhenExpression>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font size="4" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_M}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement uuid="3e23c0c4-41e6-43ed-a745-fff8e714ac26" style="Crosstab Data Text" x="335" y="0" width="24" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_J}.doubleValue() > 1]]></printWhenExpression>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font size="4" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_J}]]></textFieldExpression>
+						</textField>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+							<reportElement uuid="e6300985-4861-485c-947e-1b778c255b40" style="Crosstab Data Text" x="311" y="0" width="24" height="13">
+								<printWhenExpression><![CDATA[$V{STATUS_M}.doubleValue() > 1]]></printWhenExpression>
+							</reportElement>
+							<textElement verticalAlignment="Middle">
+								<font size="4" isBold="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{STATUS_W}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="383" height="0" rowTotalGroup="EMP_ID" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="EMP_ID" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="EMP_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="EMP_NAME" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="EMP_NAME" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="POSITION">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="POSITION" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="POSITION" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="GROUP_ID">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="GROUP_ID" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="GROUP_ID" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="LINE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="LINE" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="LINE" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="STATUS_HARIAN">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="STATUS_HARIAN" columnTotalGroup="ATTENDANCE_DATE">
+					<cellContents/>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="STATUS_HARIAN" columnTotalGroup="DAY_NAME">
+					<cellContents/>
+				</crosstabCell>
+			</crosstab>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement uuid="031d06e6-f6cd-43bc-a767-73a407786d65" x="14" y="14" width="566" height="73"/>
+				<imageExpression><![CDATA[$P{LOGOURL}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="52f9ba98-1a13-48fe-b3d8-33e4953be929" x="14" y="14" width="405" height="26" forecolor="#319442"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+					<paragraph leftIndent="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CO_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="34cde935-6911-45c5-a092-f3f6924c899e" x="44" y="87" width="43" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="4" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fromdate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="5778631a-e66a-4569-85d7-1f6ea83df75d" x="99" y="87" width="45" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="4" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{todate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="53313177-88a2-478f-8a87-5e903eb676cc" x="14" y="87" width="30" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="4" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From Date :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dc2eccda-e0b7-42c8-8dc7-00ad4ebc4757" x="87" y="87" width="12" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="4" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To :]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

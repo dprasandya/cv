@@ -1,0 +1,27 @@
+
+Ext.define('App.ux.form.fields.Help', {
+    extend       : 'Ext.Img',
+    alias        : 'widget.helpbutton',
+    src          : 'resources/images/icons/icohelp.png',
+    height       : 16,
+    width        : 16,
+    margin       : '3 10',
+    helpMsg      : _('help_message'),
+    initComponent: function() {
+        var me = this;
+        me.listeners = {
+            render: function(c) {
+                me.setToolTip(c.getEl());
+            }
+        };
+        me.callParent();
+    },
+
+    setToolTip: function(el) {
+        Ext.create('Ext.tip.ToolTip', {
+            target      : el,
+            dismissDelay: 0,
+            html        : this.helpMsg
+        });
+    }
+});

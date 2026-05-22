@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrder" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="2dd3edc5-a07d-4774-9e4f-8e3a837ac104">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FF0000"/>
+		</box>
+	</style>
+	<style name="TableHeader" mode="Opaque" backcolor="#808080"/>
+	<style name="TableFooter" mode="Opaque" backcolor="#C0C0C0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="overtime" uuid="5314218f-0a72-4871-80d0-e600287008c0">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="period" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select a.time_in, a.time_out, a.remarks, b.*
+from hris_overtime a
+left join hris_overtime_detail b on a.co_id=b.co_id and a.emp_id=b.emp_id and a.overtime_date=b.overtime_date
+where a.co_id=$P{co_id} and a.emp_id=$P{emp_id} and a.status=1 and (select period from get_period(a.overtime_date))=$P{period}
+order by a.overtime_date, b.seq_id asc]]>
+		</queryString>
+		<field name="TIME_IN" class="java.sql.Time"/>
+		<field name="TIME_OUT" class="java.sql.Time"/>
+		<field name="REMARKS" class="java.lang.String"/>
+		<field name="RATE_TOTAL" class="java.math.BigDecimal"/>
+		<field name="RATE_VALUE" class="java.math.BigDecimal"/>
+		<field name="RATE_HOURS" class="java.lang.Integer"/>
+		<field name="TIME_HOURS" class="java.lang.Integer"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="OVERTIME_DATE" class="java.sql.Date"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+		<variable name="rate_total" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{RATE_TOTAL}]]></variableExpression>
+		</variable>
+		<group name="overtime_date">
+			<groupExpression><![CDATA[$F{OVERTIME_DATE}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="LOGOURL" class="java.lang.String"/>
+	<parameter name="co_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="emp_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="period" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select a.*, b.co_name from hris_employee_s($P{emp_id},$P{co_id}) a
+left join company b on a.co_id=b.co_id]]>
+	</queryString>
+	<field name="EMP_PTKP_ID" class="java.lang.String"/>
+	<field name="EMP_REMARKS" class="java.lang.String"/>
+	<field name="EMP_JOIN_DATE" class="java.sql.Date"/>
+	<field name="EMP_OL_NAME" class="java.lang.String"/>
+	<field name="EMP_OL_ID" class="java.lang.String"/>
+	<field name="EMP_DEPT_NAME" class="java.lang.String"/>
+	<field name="EMP_DEPT_ID" class="java.lang.String"/>
+	<field name="EMP_JS_NAME" class="java.lang.String"/>
+	<field name="EMP_JS_ID" class="java.lang.String"/>
+	<field name="EMP_JOB_DESC" class="java.lang.String"/>
+	<field name="EMP_JOB_ID" class="java.lang.String"/>
+	<field name="EMP_ZIPCODE" class="java.lang.String"/>
+	<field name="EMP_EMAIL" class="java.lang.String"/>
+	<field name="EMP_MARITAL_STATUS" class="java.lang.String"/>
+	<field name="EMP_BIRTH_DATE" class="java.sql.Date"/>
+	<field name="EMP_COMPANY_NAME" class="java.lang.String"/>
+	<field name="EMP_COMPANY_ID" class="java.lang.String"/>
+	<field name="EMP_TLP" class="java.lang.String"/>
+	<field name="EMP_ADDRESS" class="java.lang.String"/>
+	<field name="EMP_CITY" class="java.lang.String"/>
+	<field name="EMP_NATION" class="java.lang.String"/>
+	<field name="EMP_GENDER" class="java.lang.String"/>
+	<field name="EMP_NAME" class="java.lang.String"/>
+	<field name="EMP_ID" class="java.lang.String"/>
+	<field name="USER_ID" class="java.lang.Integer"/>
+	<field name="CO_ID" class="java.lang.String"/>
+	<field name="CO_NAME" class="java.lang.String"/>
+	<title>
+		<band height="279">
+			<frame>
+				<reportElement uuid="7c468216-34ae-442f-8700-f853b444dee5" style="table_CH" mode="Transparent" x="14" y="109" width="566" height="91"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="76d4990f-6a68-4a75-841b-7d0129f8d182" mode="Transparent" x="91" y="15" width="194" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="6932c0af-5df4-471d-87c2-4807363dc0a1" positionType="Float" mode="Transparent" x="91" y="35" width="194" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="ad37d550-30e4-4ab1-8490-240a0480cf9c" positionType="Float" mode="Transparent" x="382" y="35" width="184" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_JOB_DESC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="14709198-6ae7-457a-82d9-253f3d32238b" positionType="Float" mode="Transparent" x="0" y="15" width="91" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="78fe7eec-9af5-4eb2-bf3b-360b3cb28b04" positionType="Float" mode="Transparent" x="0" y="35" width="91" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="0b6bf7df-1f96-4667-823c-5931dc2c1e94" positionType="Float" mode="Transparent" x="290" y="35" width="92" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Jabatan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="03550a6f-7862-4c4f-9cab-11c18abb4650" mode="Transparent" x="382" y="15" width="184" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_DEPT_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="ec7983ba-42ab-4814-b9e8-53e037a69cbb" positionType="Float" mode="Transparent" x="290" y="15" width="92" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Departemen]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="428390d7-6ea1-47f3-b469-603b8ded7c5a" positionType="Float" mode="Transparent" x="91" y="55" width="194" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_COMPANY_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="7a794c5a-13d1-4f8f-a9e7-8bc01ce88871" positionType="Float" mode="Transparent" x="0" y="55" width="91" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<text><![CDATA[Perusahaan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="a21e569e-8d97-457d-8779-0f30dfbf10b1" positionType="Float" mode="Transparent" x="291" y="55" width="91" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[Kantor]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="d90dbeb3-4405-47d1-b17f-d7aa7da7b40b" positionType="Float" mode="Transparent" x="382" y="55" width="184" height="20"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[": "+$F{EMP_OL_NAME}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement uuid="b320365b-cbd1-4abd-9876-094cba3c301b" x="14" y="87" width="566" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RINCIAN LEMBUR]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement uuid="b1fadb7e-b511-428f-adac-0a5e33c3e03a" x="14" y="14" width="566" height="73"/>
+				<imageExpression><![CDATA[$P{LOGOURL}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="89aa1034-3d96-471e-849d-ee89bf04d548" x="14" y="200" width="204" height="21"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true" isItalic="true" isUnderline="false"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Rincian Lembur :]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="558bd776-4953-493e-86f8-c7fb2adcd101" key="table 10" x="14" y="221" width="566" height="41"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="overtime" uuid="a2076689-2580-412b-9160-7bb0721fa96a">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{emp_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="period">
+							<datasetParameterExpression><![CDATA[$P{period}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="62" uuid="b930a0a6-b843-4b1a-b74d-ffe0bfc67407">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1"/>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+									<reportElement uuid="30fcb89a-2791-4857-b8e8-19128fd41cb5" x="0" y="0" width="62" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{OVERTIME_DATE}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="a0202b36-7d04-4578-9869-82269e48081d" x="0" y="0" width="62" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a812e9db-6bb8-437e-8808-04dd1b122c09" mode="Transparent" x="0" y="0" width="62" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TANGGAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="c5ba447b-aa8a-47c8-a757-001e7102e1bc">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1"/>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="1b3f64c2-a416-405a-a131-33af1c9fca1b" x="0" y="0" width="90" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{TIME_IN}+" s/d "+$F{TIME_OUT}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="6fe29ac3-d991-49e3-8c30-8e48cd56a3cf" x="0" y="0" width="90" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a1d0f8de-b3ef-47b9-ad36-f8802ab0dc40" mode="Transparent" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[JAM]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="46" uuid="897bb1fe-2ed2-4ebd-ae9a-8d49ece0fcf6">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1"/>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="b8ee2bef-1ab7-414a-b43c-11a86976cc0b" x="0" y="0" width="46" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{TIME_HOURS}+" Jam"]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="bbf2a9b8-1a7f-419c-9aaf-ada91e9847bf" x="0" y="0" width="46" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="7db5ae2b-4e39-494e-bef5-ea42dfde46ad" mode="Transparent" x="0" y="0" width="46" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[LAMA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="179" uuid="c14098a2-fdac-4e16-a617-2f56e0aa2b87">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1"/>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="f71322fe-52d7-44cc-8718-41a116c36c23" x="0" y="0" width="179" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{REMARKS}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="ea35576a-3dc6-4b51-80b5-2d877bd84f8f" x="0" y="0" width="179" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="455dda8e-4e2a-4fc6-a146-8c49897e6c76" mode="Transparent" x="0" y="0" width="179" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[REMARKS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="46" uuid="9100f610-d081-4cfd-9378-fdd321f9c320">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1"/>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="de0ec17a-fe73-493d-ae26-5395fd9b6fec" x="0" y="0" width="46" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="8a448828-c551-4f0b-9777-cc9ea91b0e92" x="0" y="0" width="46" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4ae9c193-124d-45dd-8f50-e023eb7bcfdc" mode="Transparent" x="0" y="0" width="46" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[RATE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+								<reportElement uuid="ff9df3b5-7983-4896-b2da-4040ae180f51" x="0" y="0" width="46" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="7"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{RATE_HOURS}+" Jam"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="4819c9ae-16b5-4c36-8c17-8f6ec2b04db0">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="27ac8d2f-0d7c-455f-910e-715912f14af7" mode="Transparent" x="0" y="0" width="52" height="18"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="0e6c5c8a-9869-4431-b901-959378518965" x="0" y="0" width="52" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="07358a3c-ed7a-497c-ba69-2058562e4a53" x="0" y="0" width="52" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="33088126-1b20-4962-99c6-a059fc019fa1" mode="Transparent" x="0" y="0" width="52" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[HARGA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="97571589-7020-4330-ad86-282d24de0bd4" x="0" y="0" width="52" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{RATE_VALUE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="88f36660-6c83-41a6-9495-88a9105f1eeb">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="18" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="994a8a6d-aa81-4048-ba62-93cbd3f314b3" mode="Transparent" x="0" y="0" width="90" height="18"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{rate_total}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:groupHeader groupName="overtime_date">
+							<jr:cell height="21" rowSpan="1">
+								<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+									<reportElement uuid="e0122a96-4b15-4431-a79f-bcaafd7bda90" x="0" y="0" width="90" height="21"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupHeader>
+						<jr:groupFooter groupName="overtime_date">
+							<jr:cell height="2" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="###0;-###0" isBlankWhenNull="true">
+									<reportElement uuid="52e609ea-b515-4640-a234-26aa15379747" x="0" y="0" width="90" height="2"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="7"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c428ae60-be3f-4989-b0bf-e13ca4f31d3c" mode="Transparent" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="8ab8a9df-98c3-45af-817f-c7a9aa3a6bad" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="7"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{RATE_TOTAL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="72cbe2bd-965a-4502-9120-0e337f15bd26" x="14" y="14" width="405" height="26" forecolor="#319442"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+					<paragraph leftIndent="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CO_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

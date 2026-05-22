@@ -1,0 +1,2352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrder" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="2dd3edc5-a07d-4774-9e4f-8e3a837ac104">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="309"/>
+	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FF0000"/>
+		</box>
+	</style>
+	<style name="TableHeader" mode="Opaque" backcolor="#808080"/>
+	<style name="TableFooter" mode="Opaque" backcolor="#C0C0C0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="education" uuid="a10c719c-b9f0-4b23-9faf-c92e808ce880">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_emp_educations where co_id=$P{co_id} and emp_id=$P{emp_id}
+order by join_year asc]]>
+		</queryString>
+		<field name="SCORE" class="java.math.BigDecimal"/>
+		<field name="JOIN_YEAR" class="java.lang.Integer"/>
+		<field name="MAJORS" class="java.lang.String"/>
+		<field name="INSTITUTION" class="java.lang.String"/>
+		<field name="LEVEL" class="java.lang.String"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<field name="USERINPUT" class="java.lang.String"/>
+		<field name="USEREDIT" class="java.lang.String"/>
+		<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+		<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="emergency_contact" uuid="b71785af-457a-4956-b468-fbdcec774362">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_emp_emergency_contact where co_id=$P{co_id} and emp_id=$P{emp_id}]]>
+		</queryString>
+		<field name="STATUS" class="java.lang.String"/>
+		<field name="CONTACT_MOBILE_TLP" class="java.lang.String"/>
+		<field name="CONTACT_WORK_TLP" class="java.lang.String"/>
+		<field name="CONTACT_HOME_TLP" class="java.lang.String"/>
+		<field name="CONTACT_STATUS" class="java.lang.String"/>
+		<field name="CONTACT_NAME" class="java.lang.String"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<field name="USERINPUT" class="java.lang.String"/>
+		<field name="USEREDIT" class="java.lang.String"/>
+		<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+		<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="work_experience" uuid="2c831696-2235-4113-90ae-8070f9a5be1d">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select a.*, b.job_desc, c.dept_name from hris_emp_work_experience a
+left join hris_job_title b on a.co_id=b.co_id and a.job_id=b.job_id
+left join hris_department c on a.co_id=c.co_id and a.dept_id=c.dept_id
+where a.co_id=$P{co_id} and a.emp_id=$P{emp_id}]]>
+		</queryString>
+		<field name="END_DATE" class="java.sql.Date"/>
+		<field name="FIRST_DATE" class="java.sql.Date"/>
+		<field name="DEPT_ID" class="java.lang.String"/>
+		<field name="JOB_ID" class="java.lang.String"/>
+		<field name="COMPANY_DESC" class="java.lang.String"/>
+		<field name="COMPANY_NAME" class="java.lang.String"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<field name="USERINPUT" class="java.lang.String"/>
+		<field name="USEREDIT" class="java.lang.String"/>
+		<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+		<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+		<field name="JOB_DESC" class="java.lang.String"/>
+		<field name="DEPT_NAME" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="dependents" uuid="9c351d8a-a69c-4a63-820f-b35c9b832521">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_emp_dependents where co_id=$P{co_id} and emp_id=$P{emp_id}]]>
+		</queryString>
+		<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+		<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+		<field name="USEREDIT" class="java.lang.String"/>
+		<field name="USERINPUT" class="java.lang.String"/>
+		<field name="CONTACT_STATUS" class="java.lang.String"/>
+		<field name="CONTACT_NAME" class="java.lang.String"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="training" uuid="6f1330ff-8bcb-4379-bf0a-57498b867104">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_emp_training where co_id=$P{co_id} and emp_id=$P{emp_id}]]>
+		</queryString>
+		<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+		<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+		<field name="USEREDIT" class="java.lang.String"/>
+		<field name="USERINPUT" class="java.lang.String"/>
+		<field name="INSTITUTION" class="java.lang.String"/>
+		<field name="TRAINING_NAME" class="java.lang.String"/>
+		<field name="END_DATE" class="java.sql.Date"/>
+		<field name="START_DATE" class="java.sql.Date"/>
+		<field name="SEQ_ID" class="java.lang.Integer"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<subDataset name="position" uuid="b910735d-6576-4be6-a28b-d9d5bd2f33be">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="emp_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from hris_emp_position_s($P{emp_id},$P{co_id})]]>
+		</queryString>
+		<field name="END_DATE" class="java.sql.Date"/>
+		<field name="START_DATE" class="java.sql.Date"/>
+		<field name="OL_NAME" class="java.lang.String"/>
+		<field name="OL_ID" class="java.lang.String"/>
+		<field name="JOB_DESC" class="java.lang.String"/>
+		<field name="JOB_ID" class="java.lang.String"/>
+		<field name="JS_NAME" class="java.lang.String"/>
+		<field name="JS_ID" class="java.lang.String"/>
+		<field name="DEPT_NAME" class="java.lang.String"/>
+		<field name="DEPT_ID" class="java.lang.String"/>
+		<field name="COMPANY_NAME" class="java.lang.String"/>
+		<field name="COMPANY_ID" class="java.lang.String"/>
+		<field name="EMP_ID" class="java.lang.String"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+	</subDataset>
+	<parameter name="LOGOURL" class="java.lang.String"/>
+	<parameter name="co_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="root_image" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="doc_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select a.*, b.co_name from hris_employee_s($P{doc_id},$P{co_id}) a
+left join company b on a.co_id=b.co_id]]>
+	</queryString>
+	<field name="EMP_BANK_02" class="java.lang.String"/>
+	<field name="EMP_BANK_01" class="java.lang.String"/>
+	<field name="EMP_BPJS_KETENAGAKERJAAN" class="java.lang.String"/>
+	<field name="EMP_BPJS_KESEHATAN" class="java.lang.String"/>
+	<field name="EMP_BLOOD" class="java.lang.String"/>
+	<field name="EMP_RELIGION" class="java.lang.String"/>
+	<field name="EMP_ST_NAME" class="java.lang.String"/>
+	<field name="EMP_ST_ID" class="java.lang.String"/>
+	<field name="EMP_NPWP" class="java.lang.String"/>
+	<field name="PATH_IMAGE" class="java.lang.String"/>
+	<field name="EMP_PTKP_ID" class="java.lang.String"/>
+	<field name="EMP_REMARKS" class="java.lang.String"/>
+	<field name="EMP_JOIN_DATE" class="java.sql.Date"/>
+	<field name="EMP_POS_NAME" class="java.lang.String"/>
+	<field name="EMP_POS_ID" class="java.lang.String"/>
+	<field name="EMP_OL_NAME" class="java.lang.String"/>
+	<field name="EMP_OL_ID" class="java.lang.String"/>
+	<field name="EMP_DEPT_NAME" class="java.lang.String"/>
+	<field name="EMP_DEPT_ID" class="java.lang.String"/>
+	<field name="EMP_JS_NAME" class="java.lang.String"/>
+	<field name="EMP_JS_ID" class="java.lang.String"/>
+	<field name="EMP_JOB_DESC" class="java.lang.String"/>
+	<field name="EMP_JOB_ID" class="java.lang.String"/>
+	<field name="EMP_ZIPCODE" class="java.lang.String"/>
+	<field name="EMP_EMAIL" class="java.lang.String"/>
+	<field name="EMP_MARITAL_STATUS" class="java.lang.String"/>
+	<field name="EMP_BIRTH_DATE" class="java.sql.Date"/>
+	<field name="EMP_COMPANY_NAME" class="java.lang.String"/>
+	<field name="EMP_COMPANY_ID" class="java.lang.String"/>
+	<field name="EMP_TLP" class="java.lang.String"/>
+	<field name="EMP_ADDRESS" class="java.lang.String"/>
+	<field name="EMP_CITY" class="java.lang.String"/>
+	<field name="EMP_NATION" class="java.lang.String"/>
+	<field name="EMP_GENDER" class="java.lang.String"/>
+	<field name="EMP_NAME" class="java.lang.String"/>
+	<field name="EMP_ID" class="java.lang.String"/>
+	<field name="DOC_ID" class="java.lang.String"/>
+	<field name="USER_ID" class="java.lang.Integer"/>
+	<field name="CO_ID" class="java.lang.String"/>
+	<field name="CO_NAME" class="java.lang.String"/>
+	<title>
+		<band height="13"/>
+	</title>
+	<pageHeader>
+		<band height="80">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement uuid="3f93ca96-a8de-4fd4-ac01-70827a32c132" x="14" y="0" width="566" height="73"/>
+				<imageExpression><![CDATA[$P{LOGOURL}]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="0290ff0f-cb6e-44b4-8cf9-2d371e4133f7" x="14" y="0" width="405" height="26" forecolor="#319442"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+					<paragraph leftIndent="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CO_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="725">
+			<componentElement>
+				<reportElement uuid="748d397d-d82a-4810-a9b8-0c18da167ec1" key="table 10" positionType="Float" x="14" y="504" width="566" height="19"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="education" uuid="82b12463-1fe8-4ca8-9ea0-98080cc9981d">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="57" uuid="0d61796a-47d0-4ba1-bc75-8cf67bdd0a97">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a67aeb63-1826-4022-a9f0-fff0904179c1" style="table_TH" mode="Transparent" x="0" y="0" width="57" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TAHUN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f22f0688-566e-4dd3-be1c-dcadad9efa06" mode="Transparent" x="0" y="0" width="57" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="6993f33e-d6aa-4e91-a182-252daeaa5d56" x="0" y="0" width="57" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{JOIN_YEAR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74" uuid="7f2cdd60-46a4-4634-af13-b9bdf0f97f85">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="37dd4b44-884b-43ac-8072-38b49973168e" style="table_TH" mode="Transparent" x="0" y="0" width="74" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TINGKAT]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="39dbc91c-2f2e-4fff-b6da-1afe5324b161" mode="Transparent" x="0" y="0" width="74" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="0abaaeea-79e3-4b9b-82af-a3716675e95a" x="0" y="0" width="74" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LEVEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="164" uuid="27cee7b0-bcfb-4d2e-a72b-cc7c5adf4eb7">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ea607135-57b7-45d0-8987-7811761c0544" style="table_TH" mode="Transparent" x="0" y="0" width="164" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[PENDIDIKAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ee0eb7f2-b5f3-4ba9-9aa9-02d769d266f1" mode="Transparent" x="0" y="0" width="164" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="b7a64f20-d71e-4241-ad3c-192660e51b75" x="0" y="0" width="164" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{INSTITUTION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="6afa1f79-2450-449e-a64b-c0b4702c1c24">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="286ee436-e00e-4fb5-9235-5a58ce2279d9" style="table_TH" mode="Transparent" x="0" y="0" width="180" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[JURUSAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4aa68736-8c90-479a-8b24-c0f9028ab32b" mode="Transparent" x="0" y="0" width="180" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="c531e0c1-a9bf-4e3d-8f93-b7ae5271b942" x="0" y="0" width="180" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{MAJORS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c8d21248-f939-4f03-a767-97a52aa440fb">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ce9a4530-60e2-418b-aa41-fd4fee624529" style="table_TH" mode="Transparent" x="0" y="0" width="90" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[IPK / SKOR]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="48a6bbce-5cd7-44a0-ad64-5abb9807efb8" mode="Transparent" x="0" y="0" width="90" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="04a7bc4f-feed-4d9c-8f7e-1bdac06ae900" x="0" y="0" width="90" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{SCORE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement uuid="d8bf26b6-547b-42ca-b268-4346ebf904f6" key="table 10" positionType="Float" x="14" y="588" width="566" height="20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="emergency_contact" uuid="cac65f41-17a6-4d21-bae6-0cfbcd569ec5">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="164" uuid="af608cf1-b258-43a8-83f2-bdedae0a9461">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b4a4e8fc-9618-4ac4-b3bf-f4c0351d4194" style="table_TH" mode="Transparent" x="0" y="0" width="164" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[NAMA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="18224f89-e6ba-46e6-95af-b947ecc30c7a" mode="Transparent" x="0" y="0" width="164" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="95eb2a4c-b7a1-452c-8bcd-4749126d3e50" x="0" y="0" width="164" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="102" uuid="6cd03800-031d-4539-99a7-39b854788911">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="f5b14c67-e538-4874-b962-b43d7c175a20" style="table_TH" mode="Transparent" x="0" y="0" width="102" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[HUBUNGAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="da3a3de8-9fe7-4e61-abc1-f1c5488d03dd" mode="Transparent" x="0" y="0" width="102" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="57c12952-d904-45fe-8786-f3a490fb016c" x="0" y="0" width="102" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_STATUS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="1d3dd6d3-b0ca-44d0-b3dc-4efb60557f44">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6f20a1f1-94e6-463c-8c24-83acb749a529" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TLP RUMAH]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="fa91064e-fb44-4568-83ad-4c37bedfb9cb" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="e86f7055-0439-46cb-abfb-887515c85eb0" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_HOME_TLP}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="40068b20-76fa-4c32-8648-532503d6e931">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="49338aec-fb96-4a10-a15f-4ef8f368b99e" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[TLP KANTOR]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2b59c941-dbbf-4ff0-b110-a4ba64d28856" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="7c9ff681-c02d-47c8-8bb5-9450ebe1e5c5" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_WORK_TLP}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="b0d04e86-74cd-432f-b561-5c078467c083">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2739b43e-3b70-4f14-8ddf-2994b82e78d8" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[HP]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2b34212a-ac60-44c2-bc3f-a9e01f0cdbb7" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="c114c1a3-1531-4afe-abc0-a8b023cee573" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_MOBILE_TLP}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="91896979-4f2c-4bd1-af26-d9ff3378637d" positionType="Float" x="14" y="484" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0e13fa7-57a9-4fe2-9e3d-b72f5a118801" positionType="Float" x="14" y="568" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMERGENCY CONTACT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3638243e-18bb-47ce-8072-4c33a9a9ce31" positionType="Float" x="14" y="608" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENGALAMAN KERJA]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="2c5e8c4e-063e-4452-b679-3523bd9ca909" key="table 10" positionType="Float" x="14" y="628" width="566" height="19"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="work_experience" uuid="d3b4db45-4de9-4f24-b9ce-2894fb2d8eef">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="107" uuid="c53ee3e8-2602-420e-a47d-cf7d076e6daa">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="04538b72-e3db-45c8-9820-24757da403fc" style="table_TH" mode="Transparent" x="0" y="0" width="107" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[PERUSAHAAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="858b33a6-9a3f-4c81-a46d-d5905e61f6a8" mode="Transparent" x="0" y="0" width="107" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="80a27c68-a30b-474f-a30c-6369a2aac37c" x="0" y="0" width="107" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{COMPANY_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="134" uuid="9e7cea29-44f9-4e88-be59-384146e1b8da">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="bdb52f2a-9f7d-47c2-b587-e74210772c92" style="table_TH" mode="Transparent" x="0" y="0" width="134" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[GAMBARAN KERJA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="06c33ec7-1257-48b7-9a04-3be5ed2eeeeb" mode="Transparent" x="0" y="0" width="134" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="bb3b9bbd-4dba-47c2-978a-2dad26d9d22d" x="0" y="0" width="134" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{COMPANY_DESC}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="f8ab7019-06b8-4817-86a4-c3f3dea15f5e">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6d361a28-3275-4ee9-8d1a-2e6ea0480583" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DEPARTEMEN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="44df235a-7cf6-44eb-9ae4-692629ef9e59" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="a92530cf-0bad-4463-8661-db1cdaeef0c6" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DEPT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="4723c8ab-4c68-44df-a824-3d491916832d">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="79162865-869c-4218-9161-e2b79ba2388f" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[JABATAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c9cc5281-9452-44ea-ac12-4d2b0134b949" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="12393a3b-e94e-4252-9094-2d8500c4fc0a" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{JOB_DESC}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="ec2df709-128e-48b1-8991-15cfe489ad24">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4a8941b0-9e1f-4bb2-b543-bc591f8ec4c7" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DARI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="48cbb77e-6018-4e15-b75d-e1c01a01b52b" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="9e528a84-5771-4d43-8a80-0248236a480b" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FIRST_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="f98a7545-f02a-4fe7-a502-65722366cbc3">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="fb58d4b4-5c9c-4cd2-bf26-bc663f77dd9e" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[SAMPAI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="5066be4c-1239-448d-97cc-1f9f2daa1404" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="f08c89ee-4de5-41c4-80ab-b469f8eaa6aa" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{END_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="fb032255-2a48-4876-8f58-feadacb7f1e2" positionType="Float" x="14" y="523" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGUNGAN]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="8a377de8-8be7-4b5c-adaf-0fd11db6b750" key="table 10" positionType="Float" x="14" y="543" width="369" height="20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dependents" uuid="fb44f734-ea93-4c6f-93f6-a2ff06ef305b">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="164" uuid="b1443a6b-1a51-43e2-ae42-bb14ededdd9a">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="5e8efcd3-75bd-47b0-b3d6-a959e1bb0450" style="table_TH" mode="Transparent" x="0" y="0" width="164" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[NAMA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="90bc7346-7c39-4987-b7cf-90e24c592071" mode="Transparent" x="0" y="0" width="164" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="e75a54e0-7b82-42c4-bfd6-6337bfdd87b9" x="0" y="0" width="164" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="102" uuid="018bd9d8-ef50-4dfb-a7db-abdae1ea6235">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4c2fbefe-64e3-4160-a8b6-222cd067515e" style="table_TH" mode="Transparent" x="0" y="0" width="102" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[HUBUNGAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="fb097184-7b65-4c81-add0-0b703588e0ec" mode="Transparent" x="0" y="0" width="102" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="e88d8659-c18d-4d89-890c-7abca98503b7" x="0" y="0" width="102" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{CONTACT_STATUS}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="3143356c-d3e3-4e53-ab5a-5d0f783b96ee" positionType="Float" x="14" y="686" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PELATIHAN]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="9aa26045-0e3e-4489-9da0-e33473a3c39a" key="table 10" positionType="Float" x="14" y="706" width="566" height="19"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="training" uuid="16ad3dfb-8dd5-45c8-8bcc-9ede7cadde34">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="241" uuid="469093ad-b8d9-43dc-998f-ca13278941c1">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="05664737-acb0-44bf-a32b-247ddb87c64a" style="table_TH" mode="Transparent" x="0" y="0" width="241" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[PELATIHAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9c1a5fee-6d9a-4a01-a6db-de1825848a87" mode="Transparent" x="0" y="0" width="241" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="66345cbb-551e-43f5-a3e8-5310fbfa0ee9" x="0" y="0" width="241" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TRAINING_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="200" uuid="f6d91cc7-8caf-4334-9d0b-627ad627b9ee">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="76ed592c-287f-42ca-ba14-13758b2d7b08" style="table_TH" mode="Transparent" x="0" y="0" width="200" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[PENYELENGGARA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b62d5044-ccf4-40cb-994f-2b932192626d" mode="Transparent" x="0" y="0" width="200" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="80353831-0e00-4fc2-a390-ace83a06b86f" x="0" y="0" width="200" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{INSTITUTION}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="f0629238-c427-4c51-a8e8-c3a039caad2a">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="ec2281d5-0623-4d5a-8dda-a52dfe52b412" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DARI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2af15e13-186e-4381-8559-4681e61e18bb" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="69c72762-8a69-45c4-b77c-fc69315a5a79" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{START_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="54512267-316c-4dfb-a914-29a6b1f38791">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c0afeba0-b0de-4ff1-a383-1a910f6598d9" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[SAMPAI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="7b6cb60f-e767-42d8-82d1-5e26e40326a3" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="a7203f17-9fd5-4760-b75a-76d6a112bfde" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{END_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="e9ec2ec3-7428-4143-87a0-4befbf3fa7f4" positionType="Float" x="14" y="647" width="189" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HISTORI PEKERJAAN]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="a2315c2b-36a9-4935-8fab-310647c7c8a8" key="table 10" positionType="Float" x="14" y="667" width="566" height="19"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="position" uuid="e66743ba-c1eb-45b5-a312-630e01b94390">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="emp_id">
+							<datasetParameterExpression><![CDATA[$P{doc_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="107" uuid="cd5715dd-a913-45dc-8ac7-48514a628d0a">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="96715827-68e2-4872-ac19-effc69eb2ce0" style="table_TH" mode="Transparent" x="0" y="0" width="107" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[PERUSAHAAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c16af783-6e52-4764-b893-2a164123e15e" mode="Transparent" x="0" y="0" width="107" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="8dd3f7d5-7f3c-44ca-b215-aab4ee8bc970" x="0" y="0" width="107" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{COMPANY_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="134" uuid="c51692c4-085c-46af-9baa-5036cc411ba0">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="c5e358d0-5e99-4ecf-953f-bde4f1e8ffb2" style="table_TH" mode="Transparent" x="0" y="0" width="134" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[LOKASI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="4d0190a8-1227-43cd-b066-66b1233cf059" mode="Transparent" x="0" y="0" width="134" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="bfc2969a-e42d-41a0-b8de-2aae7303927e" x="0" y="0" width="134" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{OL_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="3195544f-7c06-4f49-b46d-24f5e127fd5f">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b57156c8-0a9e-498a-b695-d4851624f4eb" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DEPARTEMEN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="2c831ae0-a47a-43a6-9504-4cfb111bc72c" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="f789eadf-fc97-44b4-a734-fab11bff5ad0" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DEPT_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100" uuid="e6b5b1e2-ace7-499e-9280-e5a5509bd22a">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="54ca38f1-79ec-49f4-a36b-0444f799221c" style="table_TH" mode="Transparent" x="0" y="0" width="100" height="20"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[JABATAN]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="782c36fa-9b60-4ef8-9565-8d7a1994922f" mode="Transparent" x="0" y="0" width="100" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="2a0e10d9-d2b0-4ed6-b81e-c1bed3e1d7b3" x="0" y="0" width="100" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{JOB_DESC}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="ffeaf186-0b2d-4b91-9e7d-d7a9d3df3700">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="32ba3cb1-1ed1-4eab-8bd8-608c7229b781" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DARI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="e076f524-84ad-497f-90d0-76edd13b6f71" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="d8b0f702-f23f-4d4f-bb07-9f1783834203" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{START_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="63" uuid="c9f19b44-c89a-44ff-a7ec-1d40fd83f0bd">
+						<jr:tableHeader height="20" rowSpan="1">
+							<staticText>
+								<reportElement uuid="33deb499-e6d4-4e20-91f1-cb0b58438a0c" style="table_TH" mode="Transparent" x="0" y="0" width="63" height="20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[SAMPAI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="0" rowSpan="1"/>
+						<jr:columnFooter height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="0dc3685e-26b2-4cfc-91b4-6f3b976f5af8" mode="Transparent" x="0" y="0" width="63" height="18"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:columnFooter>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="cc2e641c-78c2-40eb-8227-a8b99d1ba0e4" x="0" y="0" width="63" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{END_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<frame>
+				<reportElement uuid="7c468216-34ae-442f-8700-f853b444dee5" style="table_CH" mode="Transparent" x="14" y="22" width="566" height="462"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="76d4990f-6a68-4a75-841b-7d0129f8d182" mode="Transparent" x="274" y="12" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="6932c0af-5df4-471d-87c2-4807363dc0a1" positionType="Float" mode="Transparent" x="274" y="32" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="ad37d550-30e4-4ab1-8490-240a0480cf9c" positionType="Float" mode="Transparent" x="274" y="336" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_JOB_DESC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="14709198-6ae7-457a-82d9-253f3d32238b" positionType="Float" mode="Transparent" x="174" y="12" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[ID		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="78fe7eec-9af5-4eb2-bf3b-360b3cb28b04" positionType="Float" mode="Transparent" x="174" y="32" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[NAMA		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="03550a6f-7862-4c4f-9cab-11c18abb4650" positionType="Float" mode="Transparent" x="274" y="296" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_DEPT_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="1257020c-59f2-4ff8-b405-28b7f7d5d864" positionType="Float" mode="Transparent" x="274" y="356" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_JS_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="428390d7-6ea1-47f3-b469-603b8ded7c5a" positionType="Float" mode="Transparent" x="274" y="256" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_COMPANY_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="130c3718-6197-4432-b759-ede56dde568b" positionType="Float" mode="Transparent" x="274" y="276" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_OL_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement uuid="a7539e64-1212-4849-b541-3320c45076f8" positionType="Float" mode="Transparent" x="274" y="376" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_JOIN_DATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement uuid="3857fdd8-78e8-436b-bf5b-58f0caa4d3df" positionType="Float" mode="Transparent" x="274" y="52" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="10" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_BIRTH_DATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="ca89b948-20ca-4933-bbe7-971a25d1a02e" positionType="Float" mode="Transparent" x="174" y="52" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[TANGGAL LAHIR	:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f26d660b-db5e-4226-8f22-3de4b265d6fc" positionType="Float" mode="Transparent" x="274" y="152" width="118" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_GENDER}.equals("M") ? "Laki-laki" :"Perempuan"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="4746e83b-2219-4ed7-a948-458f998e7e58" positionType="Float" mode="Transparent" x="174" y="152" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[JENIS KELAMIN	:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="b524e2b8-e4bc-4355-961d-37bc59daa8bf" positionType="Float" mode="Transparent" x="274" y="172" width="118" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_MARITAL_STATUS}.equals("M") ? "Menikah" : "Lajang"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="256000b9-1e43-4eee-94bf-cb06ca76f0dd" positionType="Float" mode="Transparent" x="174" y="172" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[STATUS PERNIKAHAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="17e29063-33d4-41d9-b6b4-99f568acbd7a" positionType="Float" mode="Transparent" x="174" y="72" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[KOTA		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="3be89e79-06b4-4fc5-9ea3-3d0cda03dd0c" positionType="Float" mode="Transparent" x="274" y="72" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_CITY}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="6c45f784-763c-4b23-84e4-bc54d08d9d5f" positionType="Float" mode="Transparent" x="174" y="192" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[NEGARA		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="5b5f8e80-7f16-42ac-a183-7a9777177004" positionType="Float" mode="Transparent" x="274" y="192" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_NATION}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="944023bc-5d47-48e9-bd14-4c573b13af86" positionType="Float" mode="Transparent" x="174" y="212" width="100" height="44"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<text><![CDATA[ALAMAT		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f93f06cf-a858-46d5-8b6c-a5d0afa99068" positionType="Float" mode="Transparent" x="274" y="212" width="292" height="44"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="f182912a-1a04-426c-bfaa-ba418f2595e7" positionType="Float" mode="Transparent" x="274" y="112" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_TLP}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="cc601e32-1ea6-433a-a39c-0a13a98116b8" positionType="Float" mode="Transparent" x="174" y="112" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[TELEPON		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="69baa366-cca5-46e7-b43e-88e036914e56" positionType="Float" mode="Transparent" x="274" y="132" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_EMAIL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="78a63d87-b84b-4db2-acb5-6176e763d55c" positionType="Float" mode="Transparent" x="174" y="132" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[EMAIL		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="8b133d64-e1fb-4dcb-a7fe-b6dfd45ee302" positionType="Float" mode="Transparent" x="274" y="92" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_ZIPCODE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="ffd17290-f991-43ad-950a-ef2438839cd3" positionType="Float" mode="Transparent" x="174" y="92" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[KODE POS	:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="638154db-b79b-4d77-8a87-e22ebb1fb261" positionType="Float" mode="Transparent" x="274" y="438" width="292" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_REMARKS}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+					<reportElement uuid="487b201c-ae02-44a5-b216-c84c379d22c0" x="0" y="18" width="162" height="180"/>
+					<box>
+						<topPen lineWidth="0.25" lineStyle="Dashed"/>
+						<leftPen lineWidth="0.25" lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.25" lineStyle="Dashed"/>
+					</box>
+					<imageExpression><![CDATA[$P{root_image}+$F{PATH_IMAGE}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement uuid="3bb07acd-0e06-48a6-94fb-ccc8d643d4f5" positionType="Float" mode="Transparent" x="174" y="376" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[MULAI BERGABUNG :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="42b35f4c-b53c-4375-a99b-f19d6e152c37" positionType="Float" mode="Transparent" x="174" y="276" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[KANTOR		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="ec7983ba-42ab-4814-b9e8-53e037a69cbb" positionType="Float" mode="Transparent" x="174" y="296" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[DEPARTEMEN	:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="6b54249a-3aca-4e6e-9078-5089b1ed8c15" positionType="Float" mode="Transparent" x="174" y="438" width="100" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<text><![CDATA[REMARKS		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="7a794c5a-13d1-4f8f-a9e7-8bc01ce88871" positionType="Float" mode="Transparent" x="174" y="256" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[PERUSAHAAN	:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="5f19a973-d54a-474e-bb50-8d81fbce86a1" positionType="Float" mode="Transparent" x="174" y="356" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[STATUS		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="0b6bf7df-1f96-4667-823c-5931dc2c1e94" positionType="Float" mode="Transparent" x="174" y="336" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[JABATAN		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="f1927e4d-1387-4488-b257-7d8532f98df5" positionType="Float" mode="Transparent" x="174" y="316" width="100" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[POSISI		:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="32a32ce6-d20f-47f5-a60c-3ed23c0a2ba5" positionType="Float" mode="Transparent" x="274" y="316" width="292" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_POS_NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="db904d97-7c18-47e6-8b38-66371cbce5d4" positionType="Float" mode="Transparent" x="392" y="152" width="96" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[AGAMA		:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="bb9d3be1-21f8-4c42-89cd-6a8e48f8ebb5" positionType="Float" mode="Transparent" x="392" y="172" width="96" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<text><![CDATA[GOL. DARAH	:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="7e1c64a7-7131-44d0-8e40-4a4e942e23b3" positionType="Float" mode="Transparent" x="488" y="172" width="78" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_BLOOD}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="1731ce8f-27fc-4235-b691-599c003de1d9" positionType="Float" mode="Transparent" x="488" y="152" width="78" height="20"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_RELIGION}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="0facb45c-8ca8-47c9-a4ac-1f9705c0f14d" positionType="Float" mode="Transparent" x="174" y="396" width="100" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<text><![CDATA[BPJS KESEHATAN	:	:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="1769bd65-1935-4583-9d84-b18be8120aa5" positionType="Float" mode="Transparent" x="274" y="396" width="292" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_BPJS_KESEHATAN}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement uuid="7f5aa69a-b944-4846-971e-51bf7e14fdf5" positionType="Float" mode="Transparent" x="295" y="417" width="271" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EMP_BPJS_KETENAGAKERJAAN}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement uuid="445696a5-a640-49fe-af3b-e45d53d66ee7" positionType="Float" mode="Transparent" x="174" y="417" width="121" height="21"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Top">
+						<font size="8" isBold="false"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5"/>
+					</textElement>
+					<text><![CDATA[BPJS KETENAGA KERJAAN :]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement uuid="b320365b-cbd1-4abd-9876-094cba3c301b" x="14" y="0" width="566" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORM KARYAWAN]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

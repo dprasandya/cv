@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrder" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isFloatColumnFooter="true" uuid="2dd3edc5-a07d-4774-9e4f-8e3a837ac104">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Sans_Normal" isDefault="true" fontName="DejaVu Sans" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#FF0000"/>
+		</box>
+	</style>
+	<style name="TableHeader" mode="Opaque" backcolor="#808080"/>
+	<style name="TableFooter" mode="Opaque" backcolor="#C0C0C0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="TableData" uuid="a10c719c-b9f0-4b23-9faf-c92e808ce880">
+		<parameter name="co_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="item_type" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="warehouse_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="item_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="doc_date" class="java.util.Date">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[select * from rpt_po_in_out_items($P{item_id},$P{warehouse_id},$P{item_type},$P{doc_date},$P{co_id}) order by doc_date asc]]>
+		</queryString>
+		<field name="TOTAL_NEW" class="java.math.BigDecimal"/>
+		<field name="PRICE_NEW" class="java.math.BigDecimal"/>
+		<field name="QTY_NEW" class="java.math.BigDecimal"/>
+		<field name="ITEM_TYPE_NEW" class="java.lang.String"/>
+		<field name="UNIT_ID_NEW" class="java.lang.String"/>
+		<field name="ITEM_NAME_NEW" class="java.lang.String"/>
+		<field name="ITEM_ID_NEW" class="java.lang.String"/>
+		<field name="DOC_DATE_NEW" class="java.sql.Date"/>
+		<field name="DOC_ID_NEW" class="java.lang.String"/>
+		<field name="TOTAL" class="java.math.BigDecimal"/>
+		<field name="PRICE" class="java.math.BigDecimal"/>
+		<field name="QTY" class="java.math.BigDecimal"/>
+		<field name="UNIT_ID" class="java.lang.String"/>
+		<field name="ITEM_TYPE" class="java.lang.String"/>
+		<field name="ITEM_NAME" class="java.lang.String"/>
+		<field name="ITEM_ID" class="java.lang.String"/>
+		<field name="WAREHOUSE_NAME" class="java.lang.String"/>
+		<field name="WAREHOUSE_ID" class="java.lang.String"/>
+		<field name="DOC_DATE" class="java.sql.Date"/>
+		<field name="DOC_ID" class="java.lang.String"/>
+		<field name="CO_ID" class="java.lang.String"/>
+		<variable name="AUTONUMBER" class="java.lang.Integer" calculation="Count">
+			<variableExpression><![CDATA[$V{AUTONUMBER}]]></variableExpression>
+			<initialValueExpression><![CDATA[new Integer(1)]]></initialValueExpression>
+		</variable>
+		<variable name="QTY IN" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{QTY_NEW}]]></variableExpression>
+		</variable>
+		<variable name="QTY OUT" class="java.math.BigDecimal" incrementType="Group" incrementGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$F{QTY}]]></variableExpression>
+		</variable>
+		<variable name="TOTAL IN" class="java.math.BigDecimal" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTAL_NEW}]]></variableExpression>
+		</variable>
+		<variable name="TOTAL OUT" class="java.math.BigDecimal" incrementType="Group" incrementGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTAL}]]></variableExpression>
+		</variable>
+		<variable name="QTY_OUTSTANDING" class="java.math.BigDecimal" resetType="Group" resetGroup="doc_id" incrementType="Group" incrementGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$V{QTY OUT}.doubleValue() - $V{QTY IN}.doubleValue()]]></variableExpression>
+		</variable>
+		<variable name="QTY IN_SUB" class="java.math.BigDecimal" resetType="Group" resetGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$F{QTY_NEW}]]></variableExpression>
+		</variable>
+		<variable name="TOTAL IN_SUB" class="java.math.BigDecimal" resetType="Group" resetGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$F{TOTAL_NEW}]]></variableExpression>
+		</variable>
+		<variable name="QTY_OUTSTANDING_SUB" class="java.math.BigDecimal" resetType="Group" resetGroup="doc_id" incrementType="Group" incrementGroup="doc_id" calculation="Sum">
+			<variableExpression><![CDATA[$F{QTY}.doubleValue() - $V{QTY IN_SUB}.doubleValue()]]></variableExpression>
+		</variable>
+		<group name="doc_id">
+			<groupExpression><![CDATA[$F{DOC_ID}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="LOGOURL" class="java.lang.String"/>
+	<parameter name="co_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="item_type" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="warehouse_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="item_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="doc_date" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from types where co_id=$P{co_id} and type_id=$P{item_type}]]>
+	</queryString>
+	<field name="TIMEEDIT" class="java.sql.Timestamp"/>
+	<field name="TIMEINPUT" class="java.sql.Timestamp"/>
+	<field name="USEREDIT" class="java.lang.String"/>
+	<field name="USERINPUT" class="java.lang.String"/>
+	<field name="STATUS" class="java.lang.String"/>
+	<field name="REMARKS" class="java.lang.String"/>
+	<field name="TYPE_NAME" class="java.lang.String"/>
+	<field name="TYPE_ID" class="java.lang.String"/>
+	<field name="CO_ID" class="java.lang.String"/>
+	<title>
+		<band height="162">
+			<staticText>
+				<reportElement uuid="64c65e38-298e-4afe-b42d-2b4cb257bfc1" x="14" y="78" width="192" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PO OUT IN ITEMS REPORT]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d59046fa-7530-4ede-8a81-564e7648d866" x="14" y="77" width="812" height="1"/>
+			</line>
+			<componentElement>
+				<reportElement uuid="1e8ff21f-0e21-43f8-9568-0cde6e7339d3" key="table 8" x="14" y="108" width="812" height="54"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="TableData" uuid="aaeaed3d-9eb5-4c7e-b60e-32b477d95f6e">
+						<datasetParameter name="co_id">
+							<datasetParameterExpression><![CDATA[$P{co_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="item_type">
+							<datasetParameterExpression><![CDATA[$P{item_type}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="warehouse_id">
+							<datasetParameterExpression><![CDATA[$P{warehouse_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="item_id">
+							<datasetParameterExpression><![CDATA[$P{item_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="doc_date">
+							<datasetParameterExpression><![CDATA[$P{doc_date}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="78" uuid="9a995d2a-83f2-4e58-a28e-22e55bad7e3d">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="ef3f65fa-ff10-499d-9c98-038bfe3c61c5" mode="Transparent" x="0" y="0" width="78" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="cb57e414-475c-4391-beb7-b79637a4feee" style="table_TH" mode="Transparent" x="0" y="0" width="78" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DOC ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="66b966cd-d846-476c-9e81-2439845eaa02" x="0" y="0" width="78" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_ID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="43" uuid="80f47356-f60b-4dfe-b321-64a13e35feb2">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="17655b0e-5bd7-4c61-9680-4909f54710f4" mode="Transparent" x="0" y="0" width="43" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="29ca3a5f-05f0-448b-b5b1-e9949aa29b19" style="table_TH" mode="Transparent" x="0" y="0" width="43" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DATE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="914c73b9-8e1e-4e7f-bef3-86853a6f7a99" x="0" y="0" width="43" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_DATE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="46" uuid="e620cad4-f831-48f8-b3cd-d1c3e1606e8a">
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="2beab351-6e61-4a44-931b-c1c54d66ebfe" mode="Transparent" x="0" y="0" width="46" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="4e00797c-60fa-4bdc-90c0-ab3bfd6896f2" style="table_TH" mode="Transparent" x="0" y="0" width="46" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<text><![CDATA[WAREHOUSE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="21453e47-bdc5-4ab7-b6e3-c569457e83e2" x="0" y="0" width="46" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{WAREHOUSE_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="f9688b70-422f-4367-87a8-e30f5b40bde5">
+						<jr:tableFooter height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="57253450-3c9f-4a00-8570-df27b5149333" style="table_TH" mode="Transparent" x="0" y="0" width="76" height="16"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[GRAND TOTAL]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="95f1fffc-59d2-4b8f-9ade-69ff99de9b78" mode="Transparent" x="0" y="0" width="76" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="10fa31f8-1a06-41f9-adc8-982eb9ac6902" style="table_TH" mode="Transparent" x="0" y="0" width="76" height="36"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[ITEM NAME]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="2b16daba-f41b-470e-8108-0f8c5f95cca2" x="0" y="0" width="76" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ITEM_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="23" uuid="10a5cc5e-148d-4b18-a4ef-adaabbb3d331">
+						<jr:tableFooter height="16" rowSpan="1">
+							<staticText>
+								<reportElement uuid="32f556cc-cf55-448a-b6d4-914eaa5037af" mode="Transparent" x="0" y="0" width="23" height="16"/>
+								<box>
+									<topPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="68aa96e9-79a5-4bdf-af1a-4974cce2ec3c" mode="Transparent" x="0" y="0" width="23" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="e5dba6de-8801-4940-aadb-c8f2a1522fa7" style="table_TH" mode="Transparent" x="0" y="0" width="23" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<text><![CDATA[UNIT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="5ee12abd-3a96-4768-9cd1-9b6e55a84453" x="0" y="0" width="23" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{UNIT_ID}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:columnGroup width="144" uuid="3776a2a5-1b7c-488b-a13a-d7e8bda4ff69">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="94b176c9-b9db-49f5-8551-e0d24f8e922b" style="table_TH" mode="Transparent" x="0" y="0" width="144" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[OUT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:column width="49" uuid="4043b586-000b-4a07-8bf0-7bc11b3fa6ed">
+							<jr:tableFooter height="16" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="abf148bf-ade1-44ec-9366-6164c619dcee" style="table_TH" mode="Transparent" x="0" y="0" width="49" height="16"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{QTY OUT}]]></textFieldExpression>
+								</textField>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<staticText>
+										<reportElement uuid="b8fe395e-8434-4bd0-81c5-8a36763479f6" mode="Transparent" x="0" y="0" width="49" height="18"/>
+										<box>
+											<topPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+										</box>
+										<textElement verticalAlignment="Middle">
+											<font isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<text><![CDATA[]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="51f9ec39-e28e-4f0e-b5b5-d436c186d6d3" style="table_TH" mode="Transparent" x="0" y="0" width="49" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[QTY]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="df7ee153-5e37-4599-9032-0bb35ac27fe1" x="0" y="0" width="49" height="20"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="33" uuid="e63dbd2c-8a6f-4794-bf1e-32d15c7a2c54">
+							<jr:tableHeader height="0" rowSpan="1"/>
+							<jr:tableFooter height="16" rowSpan="1">
+								<staticText>
+									<reportElement uuid="9c0628b0-6bc0-47ea-ae48-e1391c65e6da" mode="Transparent" x="0" y="0" width="33" height="16"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<staticText>
+										<reportElement uuid="1a5940c8-3493-4362-89f9-efd23e73f5b4" mode="Transparent" x="0" y="0" width="33" height="18"/>
+										<box>
+											<topPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+										</box>
+										<textElement verticalAlignment="Middle">
+											<font isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<text><![CDATA[]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="a4dba5bc-358f-45f5-9744-fdd9d785c12e" style="table_TH" mode="Transparent" x="0" y="0" width="33" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[PRICE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="0" rowSpan="1"/>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="cec37162-6352-42e3-9eac-45f67b857d1e" x="0" y="0" width="33" height="20"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{PRICE}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="62" uuid="a018165f-9f13-4df8-b132-5a13e5582156">
+							<jr:tableFooter height="16" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="cf673867-8f95-4070-9acd-66c26c4ae6de" style="table_TH" mode="Transparent" x="0" y="0" width="62" height="16"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{TOTAL OUT}]]></textFieldExpression>
+								</textField>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<staticText>
+										<reportElement uuid="1e25e131-97ce-4d7f-8390-bd20efd66cfb" mode="Transparent" x="0" y="0" width="62" height="18"/>
+										<box>
+											<topPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+										</box>
+										<textElement verticalAlignment="Middle">
+											<font isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<text><![CDATA[]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="398f90c1-f1e8-45f8-9644-211ea51c6712" style="table_TH" mode="Transparent" x="0" y="0" width="62" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[TOTAL]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="d409d9a4-1d44-4ea8-8384-893c9bb00c01" x="0" y="0" width="62" height="20"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+					<jr:column width="78" uuid="fb2efb96-3c5a-4c72-9b7f-f7f076d66a14">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="4bf32aa8-4977-4b94-993c-c73726d408cb" mode="Transparent" x="0" y="0" width="78" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="3a68bc10-e65f-4969-89d5-10eab2b34e53" style="table_TH" mode="Transparent" x="0" y="0" width="78" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DOC ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="c21cafbf-8796-4bf9-a4e7-59b47a853de0" x="0" y="0" width="78" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_ID_NEW}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="43" uuid="fcc590ca-c6bc-4106-91d0-21adfbdaf173">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="678318c1-ee1a-4dbf-a677-b5ac050f9d73" mode="Transparent" x="0" y="0" width="43" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="bf94af7a-206a-463c-b889-2c138e8776e0" style="table_TH" mode="Transparent" x="0" y="0" width="43" height="36"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[DATE]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+								<reportElement uuid="fb0aefe5-ca1b-431d-b0e1-a4d44df13487" x="0" y="0" width="43" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{DOC_DATE_NEW}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="76" uuid="399a72bb-f35d-43c8-b174-13a1d9da56d7">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1"/>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="90e0518b-dae9-435c-93b8-8748298edb8c" mode="Transparent" x="0" y="0" width="76" height="18"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+										<bottomPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[TOTAL]]></text>
+								</staticText>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="61824625-9152-4059-90f4-7a4330485907" style="table_TH" mode="Transparent" x="0" y="0" width="76" height="36"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[ITEM NAME]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement uuid="45a924a3-0347-4e6f-9d94-092367ba1523" x="0" y="0" width="76" height="20"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{ITEM_NAME_NEW}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:columnGroup width="147" uuid="c9abbc32-967d-4874-b2c7-085666e30f75">
+						<jr:columnHeader height="18" rowSpan="1">
+							<staticText>
+								<reportElement uuid="d040c734-fcb5-4736-853b-55cb24f08e14" style="table_TH" mode="Transparent" x="0" y="0" width="147" height="18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[IN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:column width="48" uuid="7227bceb-636c-4b6c-a890-9fd0ace305d8">
+							<jr:tableFooter height="16" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="deff5a2e-587e-45db-9ac2-60d8606ba17f" style="table_TH" mode="Transparent" x="0" y="0" width="48" height="16"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{QTY IN}]]></textFieldExpression>
+								</textField>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+										<reportElement uuid="b9e53dbf-9915-40ea-b4bc-7b4a892b2e79" style="table_TH" mode="Transparent" x="0" y="0" width="48" height="18"/>
+										<box>
+											<leftPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Right" verticalAlignment="Middle">
+											<font size="6" isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{QTY IN_SUB}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="2c5c0665-bbe2-4cb2-b62a-b755a32a86af" style="table_TH" mode="Transparent" x="0" y="0" width="48" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[QTY]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="c7133409-c1ea-4e93-9346-bbacdd8c9d59" x="0" y="0" width="48" height="20"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{QTY_NEW}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="37" uuid="85b4ab01-9359-41ff-b778-c7b974ce700f">
+							<jr:tableHeader height="0" rowSpan="1"/>
+							<jr:tableFooter height="16" rowSpan="1">
+								<staticText>
+									<reportElement uuid="83d1d21a-56bc-4046-8ca4-e8f065283e0b" mode="Transparent" x="0" y="0" width="37" height="16"/>
+									<box>
+										<topPen lineWidth="0.5"/>
+									</box>
+									<textElement verticalAlignment="Middle">
+										<font isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[]]></text>
+								</staticText>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<staticText>
+										<reportElement uuid="564bc77d-1def-472a-b8d3-c98c07979db8" mode="Transparent" x="0" y="0" width="37" height="18"/>
+										<box>
+											<topPen lineWidth="0.5"/>
+											<bottomPen lineWidth="0.5"/>
+										</box>
+										<textElement verticalAlignment="Middle">
+											<font isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<text><![CDATA[]]></text>
+									</staticText>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="27dc4807-f685-4bfa-bb15-678e1037cd72" style="table_TH" mode="Transparent" x="0" y="0" width="37" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[PRICE]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:columnFooter height="0" rowSpan="1"/>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="66c0a3e6-0918-4ec4-a319-f680852ab87b" x="0" y="0" width="37" height="20"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{PRICE_NEW}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="62" uuid="d8e7836c-1037-4699-96a9-670ac077f3bb">
+							<jr:tableFooter height="16" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="4baa2059-7d55-46b7-a17f-693e7000bbe9" style="table_TH" mode="Transparent" x="0" y="0" width="62" height="16"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{TOTAL IN}]]></textFieldExpression>
+								</textField>
+							</jr:tableFooter>
+							<jr:groupFooter groupName="doc_id">
+								<jr:cell height="18" rowSpan="1">
+									<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+										<reportElement uuid="4596835a-8c7d-42ca-8913-e336725b16e4" style="table_TH" mode="Transparent" x="0" y="0" width="62" height="18"/>
+										<box>
+											<leftPen lineWidth="0.5"/>
+											<rightPen lineWidth="0.5"/>
+										</box>
+										<textElement textAlignment="Right" verticalAlignment="Middle">
+											<font size="6" isBold="true"/>
+											<paragraph leftIndent="5" rightIndent="5"/>
+										</textElement>
+										<textFieldExpression><![CDATA[$V{TOTAL IN_SUB}]]></textFieldExpression>
+									</textField>
+								</jr:cell>
+							</jr:groupFooter>
+							<jr:columnHeader height="18" rowSpan="1">
+								<staticText>
+									<reportElement uuid="ea64d94d-86d3-4643-93cb-94ecf2cc1d1f" style="table_TH" mode="Transparent" x="0" y="0" width="62" height="18"/>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<text><![CDATA[TOTAL]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell height="20" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="2c04010d-dc65-47a2-89b2-44354bbfa29f" x="0" y="0" width="62" height="20"/>
+									<box>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{TOTAL_NEW}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+					<jr:column width="58" uuid="6ba5f2a3-f4ff-404d-affa-8734d2b4085c">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:tableFooter height="16" rowSpan="1">
+							<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+								<reportElement uuid="346711fc-5283-45e2-ac2b-3e066e365b93" style="table_TH" mode="Transparent" x="0" y="0" width="58" height="16"/>
+								<box>
+									<leftPen lineWidth="0.5"/>
+									<rightPen lineWidth="0.5"/>
+								</box>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{QTY_OUTSTANDING}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:groupFooter groupName="doc_id">
+							<jr:cell height="18" rowSpan="1">
+								<textField isStretchWithOverflow="true" pattern="#,##0;-#,##0" isBlankWhenNull="true">
+									<reportElement uuid="7f88b620-e669-43da-91fc-f3d649133283" style="table_TH" mode="Transparent" x="0" y="0" width="58" height="18"/>
+									<box>
+										<leftPen lineWidth="0.5"/>
+										<rightPen lineWidth="0.5"/>
+									</box>
+									<textElement textAlignment="Right" verticalAlignment="Middle">
+										<font size="6" isBold="true"/>
+										<paragraph leftIndent="5" rightIndent="5"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$V{QTY_OUTSTANDING_SUB}]]></textFieldExpression>
+								</textField>
+							</jr:cell>
+						</jr:groupFooter>
+						<jr:columnHeader height="36" rowSpan="2">
+							<staticText>
+								<reportElement uuid="e1e3a789-7952-420b-95e6-7cc7bf7e5d33" style="table_TH" mode="Transparent" x="0" y="0" width="58" height="36"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6" isBold="true"/>
+									<paragraph leftIndent="5" rightIndent="5"/>
+								</textElement>
+								<text><![CDATA[QTY
+OUTSTANDING]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement uuid="1362b657-90a2-4a8f-9b44-3a6d01c0c304" x="14" y="0" width="568" height="75"/>
+				<imageExpression><![CDATA[$P{LOGOURL}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>
