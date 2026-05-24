@@ -3,4 +3,7 @@
   <!-- Valve ini dinonaktifkan (dijadikan komentar) agar Manager bisa diakses via IP public/Docker bridge -->
   <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+    <!-- Baris di bawah ini mengizinkan akses dari luar localhost -->
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="^.*$" />       
 </Context>

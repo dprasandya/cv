@@ -1,4 +1,4 @@
-services:
+ services:
   # 1. Reverse Proxy (Pintu Masuk)
   nginx:
     image: nginx:latest
@@ -33,12 +33,18 @@ services:
   tomcat:
     image: tomcat:7.0-jre8
     container_name: app_tomcat
+    ports:
+      - "8080:8080" # Port untuk akses JavaBridge dan Manager Tomcat
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m -XX:MaxPermSize=256m
     volumes:
       - ./tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./tomcat/manager-context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
       - ./tomcat/web.xml:/usr/local/tomcat/webapps/manager/WEB-INF/web.xml
       - ./tomcat/jaybird-full.jar:/usr/local/tomcat/lib/jaybird-full.jar
       - ./reports:/usr/local/tomcat/reports
+      # SUNTIKKAN FOLDER WEBAPPS AGAR JAVABRIDGE PERMANEN
+      - ./tomcat/JavaBridge.war:/usr/local/tomcat/webapps/JavaBridge.war
       # (Opsional) Library Jasper jika Anda menggunakannya
       - ./tomcat/jasperreports.jar:/usr/local/tomcat/lib/jasperreports.jar
       - ./tomcat/itext-2.1.7.js9.jar:/usr/local/tomcat/lib/itext-2.1.7.js9.jar
