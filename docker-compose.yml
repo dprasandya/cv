@@ -52,6 +52,8 @@
       - ./tomcat/commons-collections-3.2.2.jar:/usr/local/tomcat/lib/commons-collections-3.2.2.jar
       - ./tomcat/commons-digester-2.1.jar:/usr/local/tomcat/lib/commons-digester-2.1.jar
       - ./tomcat/commons-beanutils-1.9.4.jar:/usr/local/tomcat/lib/commons-beanutils-1.9.4.jar
+      - ./html:/var/www/html
+      - ./html/sites:/var/www/html/sites
     depends_on:
       - firebird
     restart: unless-stopped

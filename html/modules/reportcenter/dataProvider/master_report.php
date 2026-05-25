@@ -1,5 +1,7 @@
 <?php
 namespace modules\reportcenter\dataProvider;
+
+use Exception;
 if (!isset($_SESSION))
 {
     session_name('SPIApp');
@@ -23,6 +25,7 @@ class master_report extends Reports
     {
         $params->params->report_co_id = $_SESSION['user']['site'];
         $this->reportfile = ROOT . '/modules/reportcenter/report/master_report/account_master_report.jasper';
+//        throw new \Exception($this->reportfile);
         $url = $this->report_execute($params);
         return array(
             'success' => true,
