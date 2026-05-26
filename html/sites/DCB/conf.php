@@ -1,11 +1,11 @@
 <?php
 
 $_SESSION['site']['db']['type'] = 'firebird';
-$_SESSION['site']['db']['host'] = '172.16.16.10';
+$_SESSION['site']['db']['host'] = 'firebird';
 $_SESSION['site']['db']['port'] = '3050';
 $_SESSION['site']['db']['username'] = 'SYSDBA';
 $_SESSION['site']['db']['password'] = 'masterkey';
-$_SESSION['site']['db']['database'] = '/var/db/datacvjasa/dcb.fdb';
+$_SESSION['site']['db']['database'] = '/firebird/data/dcb.fdb';
 /**
  * AES Key
  * 256bit - key
