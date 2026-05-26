@@ -52,12 +52,12 @@ class Reports {
         {
             if ($className == 'java.lang.String')
             {
-                $temp = new Java('java.lang.String', $value);
+                $temp = new \Java('java.lang.String', $value);
                 return $temp;
             }
             else if ($className == 'java.util.Date')
             {
-                $temp = new Java($className, $value);
+                $temp = new \Java($className, $value);
                 return $temp;
             }
             else if ($className == 'java.lang.Boolean' ||
@@ -67,13 +67,13 @@ class Reports {
                 $className == 'java.lang.Double' ||
                 $className == 'java.math.BigDecimal')
             {
-                $temp = new Java($className, $value);
+                $temp = new \Java($className, $value);
                 return $temp;
             }
             else if ($className == 'java.sql.Timestamp' ||
                 $className == 'java.sql.Time')
             {
-                $temp = new Java($className);
+                $temp = new \Java($className);
                 $javaObject = $temp->valueOf($value);
                 return $javaObject;
             }
